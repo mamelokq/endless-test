@@ -2699,27 +2699,28 @@ end
 Menu:SetSize(600, 600)
 Menu.Notify("Script Loaded.", 2)
 Menu.Tab("Aimbot")
-Menu.Container("Aimbot", "Camera Aimbot", "Left")
-Menu.CheckBox("Aimbot", "Camera Aimbot", "Checkbox", false, function(
+Menu.Tab("Player")
+Menu.Tab("Visuals")
+Menu.Tab("Teleports")
 
+------------------------Aimbot tab variables------------------------------
+Menu.Container("Aimbot", "Camera Aimbot", "Left")
+Menu.CheckBox("Aimbot", "Camera Aimbot", "Camlock", false, function(
 ) 
 end, "toggle = c")
+------------------------Aimbot tab variables end------------------------------
 
---[[
-Menu.ComboBox("Aimbot", "Camera Aimbot", "Combobox", "One", {"One", "Two", "Three"}, function()
-end, "ComboBox Tooltip")
-Menu.ColorPicker("Aimbot", "Camera Aimbot", "Colorpicker", Color3.fromRGB(255, 0, 0), 1, function()
-    
-end, "Colorpicker Tooltip")
-Menu.Slider("Aimbot", "Camera Aimbot", "Slider", 1, 100, 50, "%", 0, function()
-    
-end, "Slider Tooltip")
-Menu.Label("Aimbot", "Camera Aimbot", "Label", "Label Tooltip")
-Menu.CheckBox("Aimbot", "Camera Aimbot", "Checkbox", false, function() 
-    
-end, "Checkbox Tooltip")
 
---]]
+
+------------------------Player tab variables------------------------------
+Menu.Container("Player", "Movement", "Left")
+Menu.CheckBox("Player", "Movement", "Speed", false, function(
+) 
+end, "toggle = t")
+Menu.CheckBox("Player", "Movement", "Fly", false, function(
+) 
+end, "toggle = v")
+------------------------Player tab variables end------------------------------
 
 -- Initialize and set the title of the menu
 Menu:SetTitle("Endless.Lua")
